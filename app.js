@@ -35,13 +35,13 @@ app.set('view engine', '.hbs');
 //@route GET/
 app.get('/', async (req, res) => {
     try {
-        const allSchedules = await client.query("SELECT * FROM schedules")
+        const allSchedules = await client.query(
+            "SELECT to_char(start_at, 'HH24:MI') as start_time, to_char(end_at, 'HH24:MI') as end_time, user_name, day FROM schedules")
         const allSchedulesData = allSchedules.rows
-        const time_start = await client.query("SELECT to_char(start_at, 'HH12:MI:SS') FROM schedules ")
         res.render ('schedules/all', {
             allSchedulesData
         })
-        //select to_char( to_timestamp ( '11:00:00' , 'HH12:MI:SS' ) , 'HH24:MI:SS AM' )
+   
 
     
     } catch (err ){
