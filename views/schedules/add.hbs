@@ -1,0 +1,38 @@
+<h3>Add Schedule</h3>
+<div class="row">
+<form action="/"  method="post" class="col s12">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" id="user_name" name="user_name">
+                <label for="user_name">Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field">
+                <select name="day" id="day">
+                    <option value="public" selected>choose day</option>
+                      {{#each days}}
+                        <option value="{{counter @index}}">{{this}}</option>
+                     {{/each}}
+                </select>
+                <label for="day">Day</label>
+            </div>
+        </div>
+          <div class="row">
+            <div class="input-field">
+                <input type="time" id="start_at" name="start_at">
+                <label for="start_at">Start_at</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field">
+                <input type="time" id="end_at" name="end_at">
+                <label for="end_at">End_at</label>
+            </div>
+        </div>
+        <div class="row">
+            <a href="/" class="btn orange">Cancel</a>
+            <input type="submit" value="Save" class="btn">
+        </div>
+    </form>
+    </div>

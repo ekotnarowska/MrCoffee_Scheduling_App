@@ -1,0 +1,10 @@
+CREATE DATABASE mrcoffee
+
+CREATE TABLE schedules (
+	user_id SERIAL PRIMARY KEY,
+	user_name CHARACTER VARYING (50) NOT NULL,
+	day INTEGER NOT NULL,
+	CHECK (day BETWEEN 1 AND 7),
+	start_at TIME NOT NULL,
+	end_at TIME NOT NULL
+)
