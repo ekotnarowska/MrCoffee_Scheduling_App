@@ -1,26 +1,29 @@
-<h3>Add Schedule</h3>
+<h3>Edit Schedule</h3>
 <div class="row">
-<form action="/dashboard"  method="post" class="col s12">
+<form action="/schedules/{{schedule_id}}"  method="POST" class="col s12">
+    <input type="hidden" name ="_method" value="PUT">
         <div class="row">
             <div class="input-field">
                 <select name="day" id="day">
-                    <option value="" selected>choose day</option>
+                    {{#select schedule.day}}
+                    <option value="{{schedule.day}}" selected>{{showDays schedule.day}}</option>
                       {{#each days}}
                         <option value="{{counter @index}}">{{this}}</option>
                      {{/each}}
+                     {{/select}}
                 </select>
                 <label for="day">Day</label>
             </div>
         </div>
           <div class="row">
             <div class="input-field">
-                <input type="time" id="start_at" name="start_at">
+                <input type="time" id="start_at" name="start_at" value={{schedule.start_time}}>
                 <label for="start_at">Start_at</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field">
-                <input type="time" id="end_at" name="end_at">
+                <input type="time" id="end_at" name="end_at" value={{schedule.end_time}}>
                 <label for="end_at">End_at</label>
             </div>
         </div>

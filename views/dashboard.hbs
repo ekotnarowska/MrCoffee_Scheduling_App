@@ -1,0 +1,41 @@
+<div class="row margin">
+<h6>Welcome <span class="bold"> {{ toUpperCase userName}} </span>to our schedule management system </h6>
+</div>
+<div class="row margin">
+    <a href="/schedules/add" id="add_btn" class="btn-floating btn-large waves-effect waves-light light-blue darken-3 tooltipped" data-position="bottom" data-tooltip="I am a tooltip"><i class="fas fa-plus"></i></a>
+</div>
+
+<table class="striped table-schedule">
+        <thead>
+            <tr>
+                <th class="table-first-td">Name</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th class="center-align table-last-td">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each allSchedules}}
+                <tr>
+                    <td class='table-first-td'><a href="schedules/user/{{user_id}}" class="user-link">{{ toUpperCase first_name}} {{ toUpperCase last_name}}</a></td>
+                    <td>{{ showDays day}}</td>
+                    <td>{{start_time}} : {{end_time}}</td>
+                    <td class="center-align flex">
+                         <a href="schedules/{{schedule_id}}" class="btn ">
+                            <i class="far fa-calendar"></i>
+                        </a>
+                         <a href="schedules/user/{{user_id}}" class="btn ml amber accent-4">  <i class="fas fa-user"></i></a>
+                        <a href="schedules/{{schedule_id}}/edit" class="btn mr ml orange darken-3">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    <form action="/schedules/{{schedule_id}}" method="POST" id="delete-form" enctype="application/x-www-form-urlencoded">
+                    <input type="hidden" name="_method" value="DELETE">
+                        <button type="submit" class=" btn  red">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
+                   </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>

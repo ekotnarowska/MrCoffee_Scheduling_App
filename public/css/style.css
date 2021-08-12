@@ -1,4 +1,212 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #eceff1;
+}
+
+.main__banner {
+    width: 100vw;
+    height: 100vh;
+    background: transparent url('../img/mr_coffee_salle.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.banner__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  
+}
+
+.main__banner::before {
+    content: "";
+    display: block;
+    background-color: rgba(17, 17, 17, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.btn-main {
+    margin: 20px;
+    width: 220px;
+    height: 60px;
+}
 .margin {
     margin-top: 40px;
     margin-bottom: 20px;
+}
+.full-screen {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.image-container {
+    background: transparent url('../img/mrcoffee_salle2.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh
+}
+
+.login-header {
+    display: flex;
+    margin: 20px 0 80px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-header {
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.mrcoffee-logo {
+    margin: 5px 10px 0px 0px;
+}
+
+.btn-login {
+    padding: 0 30px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.register-container {
+    background-color: #eceff1;
+    width: 500px;
+    margin-top: 0px;
+    text-align: center;
+    box-sizing: border-box;
+}
+.register-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-link {
+    margin-left: 10px ;
+}
+
+.logo {
+   height: 50px;
+}
+
+.nav-wrapper img {
+    margin-top: 8px;
+}
+
+.border {
+    border: 1px solid #fff  !important;
+    width: 60px;
+    height: 30px;
+    border-radius: 3px;
+
+
+   
+}
+.alert {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+table.striped > tbody > tr:nth-child(2n+1) {
+    background-color: #fff !important;
+}
+
+.table-first-td {
+    padding-left: 20px;
+}
+.table-last-td {
+    padding-right: 20px;
+}
+.table-schedule {
+    margin-bottom: 50px;
+}
+.table-container {
+    width: 600px;
+    margin-top: 50px;
+}
+
+.card-container {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.avatar-frame {
+    text-align: center;
+    border:2px solid #c7b89e;
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 50px; /* Saf3+, Chrome */
+    border-radius: 50px; /* Opera 10.5, IE 9 */
+     /*-moz-border-radius: 30px;  Disabled for FF1+ */
+    
+}
+
+.avatar-frame img {
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 50px; /* Saf3+, Chrome */
+	border-radius: 50px; /* Opera 10.5, IE 9 */
+	/*-moz-border-radius: 30px;  Disabled for FF1+ */
+}
+
+.user h5 {
+    margin: 0;
+    line-height: 1;
+}
+
+.btn-float {
+    float: left;
+    /* margin-right: 10px; */
+}
+
+.user-link {
+    color: black;
+    font-weight: 600;
+}
+.user-link:hover {
+    opacity: 0.7
+}
+
+.flex { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mt {
+    margin-top: 20px;
+}
+.mb {
+    margin-bottom: 20px;
+}
+.mr {
+    margin-right: 10px;
+}
+.ml {
+    margin-left: 10px;
 }

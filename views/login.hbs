@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col s6 image-container">
+    </div>
+    <div class="col s6">
+        <div class="container login-container">
+            <div class="row login-header">
+                <div class="col s4">
+                    <img class="mrcoffee-logo right"  width='80px' height='80px' src='../img/logo_mrcoffee.png'>
+                </div>
+                <div class="col s8">
+                    <h3 class="blue-grey-text text-darken-4 left">SchedulingApp</h3>
+                </div>
+            </div>
+            {{#if message}}
+                <div class="alert">
+                    {{message}}
+                </div>
+            {{/if}}
+            <div class="login-form">
+                <div class="row">
+                    <div class="col s4">
+                        <h6 class="bold"> Sign in to continue</h6>
+                    </div>
+                    <div class="col s8">
+                        <h6> Not a member yet? <span><a class="teal-text text-lighten-2" href="/register">Register now </span></a></h6>
+                    </div>
+                </div>
+                <form action="/login"  method="post" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" name="email" type="email" class="validate" required>
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" name="password" type="password" class="validate" required>
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <input type="submit"  value="Login" class="waves-effect waves-light btn-small btn-login">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container table-container">
+<div class="card">
+    <div class="card-content">
+    <table class="table-schedule">
+          <tr>
+              <th>Name</th>
+              <td>{{schedule.first_name}} {{schedule.last_name}}</td>
+          </tr>
+          <tr>
+              <th>Day</th>
+              <td>{{ showDays schedule.day}}</td>
+          </tr>
+          <tr>
+              <th>Time</th>
+              <td>{{schedule.start_time}} : {{schedule.end_time}}</td>
+          </tr>
+           <tr>
+              <th>User id</th>
+              <td>{{schedule.user_id}}</td>
+          </tr>
+      </table>
+       <div class="row">
+            <a href="/dashboard" class="btn orange">Back</a>
+            <a href="/schedules/user/{{schedule.user_id}}" class="btn blue">User schedules</a>
+        </div>
+      </div>
+</div>
+</div>
+

@@ -1,0 +1,57 @@
+<div class="container register-container">
+    <div class="row register-header">
+        <img class="mrcoffee-logo center"  width='80px' height='80px' src='../img/logo_mrcoffee.png'>
+        <h3 class="blue-grey-text text-darken-4 center">SchedulingApp</h3>
+    </div>
+    {{#if message}}
+        <div class="alert-danger">
+            {{message}}
+            </div>
+    {{/if}}
+    <div class="card register-card">
+        <div class="card-content">
+            <div class="row">
+                <form action="/register"  method="post" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="first_name" name="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" name="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <input type="email" id="email" name="email">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <input type="password" id="password" name="password">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field">
+                            <input type="password" id="confirm_password" name="confirm_password">
+                            <label for="confirm_password">Confirm Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Create Account" class="btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 register-footer">
+            <p>Already have an account?</p>
+            <a class="login-link" href="/login">Sign in!</a>
+        </div>
+    </div>
+</div>
+

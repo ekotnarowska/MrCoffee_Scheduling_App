@@ -1,0 +1,39 @@
+
+<div class="container card-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="row valign-wrapper">
+                <div class="col s1">
+                    <div class="avatar-frame">
+                        <img src="/img/avatar.svg" alt="avatar"/>
+                    </div>
+                </div>
+                <div class="col s11 user"> 
+                    <h5>{{toUpperCase name}} {{toUpperCase lastName}}</h5>
+                    <h6>Email: {{email}}</h6>
+                </div>
+            </div>
+        <p>Number of meetings: <span class="bold"> {{numberOfSchedules}}</span></p>
+    </div>
+    </div>
+</div>
+<table class="striped">
+        <thead>
+            <tr>
+                <th class="table-first-td">Name</th>
+                <th>Day</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+             {{#each userSchedules}}
+                <tr>
+                    <td class='table-first-td'><a href="" class="user-link">{{toUpperCase first_name}} {{toUpperCase last_name}}</a></td>
+                    <td>{{ showDays day}}</td>
+                    <td>{{start_time}} : {{end_time}}</td>
+            {{/each}}
+        </tbody>
+    </table>
+     <div class="row margin">
+            <a href="/dashboard" class="btn orange">Back</a>
+        </div>
